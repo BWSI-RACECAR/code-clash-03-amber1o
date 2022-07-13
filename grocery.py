@@ -29,13 +29,18 @@ Output: [apples, bananas, bread]
 
 class Solution:
     def my_grocery_list(self,str1,str2):
-        new_grocery_list = str1 + list(str2.split(""))
-        for groceries in new_grocery_list:
-            res = []
-            for i in new_grocery_list:
-                if i not in res:
-                    new_grocery_list = res.append(i)
-                    return new_grocery_list 
+        final_list = []
+        list1 = str1.split('')
+        list1[len(list1)-1] = list1[len(list1) -1].strip()
+        list2 = str2.split('')
+        list2[len(list2)-1] = list2[len(list2)-1].strip()
+        for item in list1:
+            if item not in final_list and item != '':
+                final_list.append(item)
+        for item in list2:
+            if item not in final_list and item != '':
+                final_list.append(item)
+        return final_list
                         
                
 
