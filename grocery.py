@@ -29,19 +29,15 @@ Output: [apples, bananas, bread]
 
 class Solution:
     def my_grocery_list(self,str1,str2):
-        new_grocery_list = str1 + str2
+        new_grocery_list = str1 + list(str2.split(""))
         for groceries in new_grocery_list:
             res = []
             for i in new_grocery_list:
                 if i not in res:
-                    res.append(i)
-                    return res 
+                    new_grocery_list = res.append(i)
+                    return new_grocery_list 
                         
-                        
-
-
-              for elem in listOfElems:
-        if listOfElems.count(elem) > 1:
+               
 
         # type str2: string
         # return: list
